@@ -23171,7 +23171,26 @@ class Opening extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
       { className: __WEBPACK_IMPORTED_MODULE_2__styles_Opening_scss___default.a.content },
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__SineCanvas_js__["a" /* default */], { width: '1920', height: '500' })
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__SineCanvas_js__["a" /* default */], { width: '1920', height: '500' }),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: __WEBPACK_IMPORTED_MODULE_2__styles_Opening_scss___default.a.inner },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: __WEBPACK_IMPORTED_MODULE_2__styles_Opening_scss___default.a.introPic, src: 'https://scontent-dft4-3.cdninstagram.com/t51.2885-19/21041775_1060608730743356_6688546436847501312_a.jpg' }),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { className: __WEBPACK_IMPORTED_MODULE_2__styles_Opening_scss___default.a.hookContainer },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'h1',
+            { className: __WEBPACK_IMPORTED_MODULE_2__styles_Opening_scss___default.a.hook },
+            'Daniel Wilby'
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'h3',
+            { className: __WEBPACK_IMPORTED_MODULE_2__styles_Opening_scss___default.a.info },
+            'Programmer and Front-end Web Developer'
+          )
+        )
+      )
     );
   }
 }
@@ -23218,11 +23237,16 @@ exports = module.exports = __webpack_require__(34)(undefined);
 
 
 // module
-exports.push([module.i, "._2gt5q1hovxQ0nAPvoOQ-Mh {\n  overflow: hidden; }\n", ""]);
+exports.push([module.i, "._2gt5q1hovxQ0nAPvoOQ-Mh {\n  overflow: hidden;\n  position: relative; }\n\n._3ZMDzeGo0paVPGybALgpB6 {\n  border: black solid 3px;\n  border-radius: 10px;\n  width: 25em;\n  display: inline-block; }\n\n._3D1Yvgn_T5xE1chfy93010 {\n  width: 70%;\n  margin-left: auto;\n  margin-right: auto;\n  position: absolute;\n  top: 2.5em;\n  margin-left: auto;\n  margin-right: auto;\n  left: 0;\n  right: 0; }\n\n._1uk3omHrdwC7YinTsuOei_ {\n  vertical-align: top;\n  display: inline-block;\n  font-family: 'Lato', sans-serif;\n  position: relative;\n  height: 25em;\n  margin-left: 1em; }\n\n._27FhTWTwNLJuWLhumqB7Hg {\n  text-align: center;\n  margin: 0;\n  font-weight: bold;\n  font-size: 4em;\n  vertical-align: top; }\n\n._3yeAVWE5Ozh7aPr-E5-fvm {\n  margin: 0;\n  width: 20em;\n  font-size: 2.25em;\n  color: #4d4d4d;\n  position: absolute;\n  bottom: 0; }\n", ""]);
 
 // exports
 exports.locals = {
-	"content": "_2gt5q1hovxQ0nAPvoOQ-Mh"
+	"content": "_2gt5q1hovxQ0nAPvoOQ-Mh",
+	"introPic": "_3ZMDzeGo0paVPGybALgpB6",
+	"inner": "_3D1Yvgn_T5xE1chfy93010",
+	"hookContainer": "_1uk3omHrdwC7YinTsuOei_",
+	"hook": "_27FhTWTwNLJuWLhumqB7Hg",
+	"info": "_3yeAVWE5Ozh7aPr-E5-fvm"
 };
 
 /***/ }),
