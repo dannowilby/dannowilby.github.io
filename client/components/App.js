@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Header from './Header.js';
-import Opening from './Opening.js'
+import Landing from './Landing.js';
 
 import styles from './styles/App.scss';
 
@@ -13,8 +12,7 @@ export default class App extends React.Component {
   render() {
     return (
       <div className={styles.content}>
-        <Header />
-        <Opening />
+        <Landing />
       </div>
     );
   }

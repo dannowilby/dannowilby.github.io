@@ -1,0 +1,44 @@
+.content {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.about {
+  float: right;
+  margin-top: 2em;
+  margin-right: 4em;
+}
+
+.inner {
+  width: 20em;
+  height: 10em;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-left: 1em;
+  border-left: 2px grey solid;
+}
+
+.title {
+  margin: 0;
+}
+
+.clas {
+  margin: 0;
+}
+
+.nav {
+  margin-top: 1em;
+}
+
+.topBut {
+  margin-right: 2em;
+}
+
+.bot {
+  display: block;
+  width: 25%;
+  padding-top: .75em;
+}
