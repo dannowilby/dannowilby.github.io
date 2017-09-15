@@ -22980,9 +22980,17 @@ module.exports = function() {
 
 
 
-class App extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
+class Landing extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      showEmail: 0
+    };
+    this.changeShowEmail = this.changeShowEmail.bind(this);
+  }
+  changeShowEmail() {
+    console.log('argh');
+    if (this.state.showEmail == 1) this.setState({ showEmail: 0 });else this.setState({ showEmail: 1 });
   }
   render() {
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -22995,41 +23003,50 @@ class App extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
       ),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
-        { className: __WEBPACK_IMPORTED_MODULE_2__styles_Landing_scss___default.a.inner },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'h1',
-          { className: __WEBPACK_IMPORTED_MODULE_2__styles_Landing_scss___default.a.title },
-          'Daniel Y. Wilby'
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'h3',
-          { className: __WEBPACK_IMPORTED_MODULE_2__styles_Landing_scss___default.a.clas },
-          'Programmer and Front-end Web Developer For Hire'
-        ),
+        { className: __WEBPACK_IMPORTED_MODULE_2__styles_Landing_scss___default.a.inn },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'div',
-          { className: __WEBPACK_IMPORTED_MODULE_2__styles_Landing_scss___default.a.nav },
+          { className: __WEBPACK_IMPORTED_MODULE_2__styles_Landing_scss___default.a.inner },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'a',
-            { href: '/projects', className: __WEBPACK_IMPORTED_MODULE_2__styles_Landing_scss___default.a.topBut },
-            'Projects'
+            'h1',
+            { className: __WEBPACK_IMPORTED_MODULE_2__styles_Landing_scss___default.a.title },
+            'Daniel Y. Wilby'
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'h3',
+            { className: __WEBPACK_IMPORTED_MODULE_2__styles_Landing_scss___default.a.clas },
+            'Programmer and Front-end Web Developer For Hire'
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
+            { className: __WEBPACK_IMPORTED_MODULE_2__styles_Landing_scss___default.a.nav },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'a',
+              { href: '/projects', className: __WEBPACK_IMPORTED_MODULE_2__styles_Landing_scss___default.a.topBut },
+              'Projects'
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'a',
+              { href: '/blog', className: __WEBPACK_IMPORTED_MODULE_2__styles_Landing_scss___default.a.topBut },
+              'Blog'
+            )
           ),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'a',
-            { href: '/blog', className: __WEBPACK_IMPORTED_MODULE_2__styles_Landing_scss___default.a.topBut },
-            'Blog'
+            { onClick: this.changeShowEmail, className: __WEBPACK_IMPORTED_MODULE_2__styles_Landing_scss___default.a.bot },
+            'Email Me'
           )
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'a',
-          { href: 'https://mail.google.com/mail/u/0/#inbox?compose=new', className: __WEBPACK_IMPORTED_MODULE_2__styles_Landing_scss___default.a.bot },
-          'Email Me'
+          { className: __WEBPACK_IMPORTED_MODULE_2__styles_Landing_scss___default.a.email, style: { opacity: +this.state.showEmail } },
+          'dywilby@gmail.com'
         )
       )
     );
   }
 }
-/* harmony export (immutable) */ __webpack_exports__["a"] = App;
+/* harmony export (immutable) */ __webpack_exports__["a"] = Landing;
 
 
 /***/ }),
@@ -23072,18 +23089,20 @@ exports = module.exports = __webpack_require__(84)(undefined);
 
 
 // module
-exports.push([module.i, ".Z_OxOtwwb9tGoLA_8oWdX {\n  height: 100vh;\n  width: 100vw;\n  position: relative; }\n\n._21YUMHN7ZfnwpfggJ4_dcD {\n  float: right;\n  margin-top: 2em;\n  margin-right: 4em; }\n\n._30EGMlZ1c1RjpyhXDEGGYj {\n  width: 20em;\n  height: 10em;\n  position: absolute;\n  top: 35%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  padding-left: 1em;\n  border-left: 2px grey solid; }\n\n.yWoXeLaEISWUlUF2E1_Uw {\n  margin: 0; }\n\n._3ZTQRSsk_c8aJYGBE8CQeR {\n  margin: 0; }\n\n._3G0mMuuHujp9fTL6BJlMmC {\n  margin-top: 1em; }\n\n._2aPh1pMipSk5pUY7lLU4TW {\n  margin-right: 2em; }\n\n._3WlHeqTokPoPukK90F5G-E {\n  display: block;\n  width: 25%;\n  padding-top: .75em; }\n", ""]);
+exports.push([module.i, ".Z_OxOtwwb9tGoLA_8oWdX {\n  height: 100vh;\n  width: 100vw;\n  position: relative; }\n\n._21YUMHN7ZfnwpfggJ4_dcD {\n  float: right;\n  margin-top: 2em;\n  margin-right: 4em; }\n\n._23KJA9Obvjt-M0sJT0jiqd {\n  position: absolute;\n  top: 35%;\n  left: 50%;\n  transform: translate(-50%, -50%); }\n\n._30EGMlZ1c1RjpyhXDEGGYj {\n  width: 20em;\n  height: 10em;\n  padding-left: 1em;\n  border-left: 2px grey solid; }\n\n.yWoXeLaEISWUlUF2E1_Uw {\n  margin: 0; }\n\n._3ZTQRSsk_c8aJYGBE8CQeR {\n  margin: 0; }\n\n._3G0mMuuHujp9fTL6BJlMmC {\n  margin-top: 1em; }\n\n._2aPh1pMipSk5pUY7lLU4TW {\n  margin-right: 2em; }\n\n._3WlHeqTokPoPukK90F5G-E {\n  display: block;\n  width: 25%;\n  padding-top: .75em;\n  color: blue;\n  text-decoration: underline;\n  cursor: pointer; }\n\n._3WlHeqTokPoPukK90F5G-E:active {\n  color: purple; }\n\n._2vzH3bs881rUFhm1Hyv3iE {\n  display: block;\n  margin-top: 1em;\n  margin-left: 1em;\n  padding: .5em;\n  font-size: .8em;\n  background-color: #f3f3f3; }\n", ""]);
 
 // exports
 exports.locals = {
 	"content": "Z_OxOtwwb9tGoLA_8oWdX",
 	"about": "_21YUMHN7ZfnwpfggJ4_dcD",
+	"inn": "_23KJA9Obvjt-M0sJT0jiqd",
 	"inner": "_30EGMlZ1c1RjpyhXDEGGYj",
 	"title": "yWoXeLaEISWUlUF2E1_Uw",
 	"clas": "_3ZTQRSsk_c8aJYGBE8CQeR",
 	"nav": "_3G0mMuuHujp9fTL6BJlMmC",
 	"topBut": "_2aPh1pMipSk5pUY7lLU4TW",
-	"bot": "_3WlHeqTokPoPukK90F5G-E"
+	"bot": "_3WlHeqTokPoPukK90F5G-E",
+	"email": "_2vzH3bs881rUFhm1Hyv3iE"
 };
 
 /***/ }),

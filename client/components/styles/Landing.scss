@@ -9,14 +9,15 @@
   margin-top: 2em;
   margin-right: 4em;
 }
-
-.inner {
-  width: 20em;
-  height: 10em;
+.inn {
   position: absolute;
   top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.inner {
+  width: 20em;
+  height: 10em;
   padding-left: 1em;
   border-left: 2px grey solid;
 }
@@ -41,4 +42,20 @@
   display: block;
   width: 25%;
   padding-top: .75em;
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.bot:active {
+  color: purple;
+}
+
+.email {
+  display: block;
+  margin-top: 1em;
+  margin-left: 1em;
+  padding: .5em;
+  font-size: .8em;
+  background-color: lighten(grey, 45%);
 }
