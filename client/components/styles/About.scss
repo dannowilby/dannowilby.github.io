@@ -1,0 +1,54 @@
+.content {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.inn {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.inner {
+  width: 20em;
+  height: 10em;
+  border-top: 2px grey solid;
+}
+
+.highlight {
+  font-weight: normal;
+  text-decoration: underline;
+}
+
+.header {
+  height: 2em;
+  line-height: 2em;
+}
+
+.section {
+  margin: 0;
+  display: inline-block;
+}
+
+.next {
+  display: inline-block;
+  float: right;
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+}
+
+.next:active {
+  color: purple;
+}
+
+.descript {
+}
+
+.back {
+  float: right;
+  margin-top: 2em;
+  margin-right: 4em;
+}

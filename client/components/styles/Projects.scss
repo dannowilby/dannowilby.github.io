@@ -1,0 +1,52 @@
+.content {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.inner {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+}
+
+.title {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+  margin-right: .5em;
+}
+
+.back {
+  float: right;
+  margin-top: 2em;
+  margin-right: 4em;
+}
+
+.inn {
+  display: inline-block;
+  border-left: 2px grey solid;
+}
+
+.itemlast {
+  display: block;
+  width: 20em;
+  margin-bottom: 0;
+  margin-left: 1em;
+  padding: .5em;
+  font-size: .8em;
+  cursor: pointer;
+  background-color: lighten(grey, 45%);
+}
+
+.item {
+  display: block;
+  width: 20em;
+  margin-bottom: 1em;
+  margin-left: 1em;
+  padding: .5em;
+  font-size: .8em;
+  cursor: pointer;
+  background-color: lighten(grey, 45%);
+}

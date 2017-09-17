@@ -13,7 +13,7 @@
   position: absolute;
   top: 35%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -30%);
 }
 .inner {
   width: 20em;
@@ -40,7 +40,7 @@
 
 .bot {
   display: block;
-  width: 25%;
+  width: 35%;
   padding-top: .75em;
   color: blue;
   text-decoration: underline;
@@ -50,7 +50,6 @@
 .bot:active {
   color: purple;
 }
-
 .email {
   display: block;
   margin-top: 1em;
