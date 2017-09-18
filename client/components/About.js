@@ -21,7 +21,6 @@ export default class About extends React.Component {
     else
       this.setState({ page: 1, next: 'Next' });
 
-    console.log(this.state.page);
   }
   render() {
     return (

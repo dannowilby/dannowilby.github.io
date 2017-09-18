@@ -1,0 +1,15 @@
+.content {
+  display: block;
+  width: 20em;
+  margin-bottom: 1em;
+  margin-left: 1em;
+  padding: .5em;
+  font-size: .8em;
+  cursor: pointer;
+  background-color: lighten(grey, 45%);
+}
+
+.text {
+  color: purple;
+  text-decoration: underline;
+}

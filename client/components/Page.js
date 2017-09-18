@@ -24,7 +24,7 @@ export default class Page extends React.Component {
       return (
         <div>
           <p className={styles.descript}>
-            I am a 17-year-old web developer, writer, and entreprenuer. After several years of teaching myself coding, I now desire to programme websites full-time.
+            I am a 17-year-old British web developer, writer, and entrepreneur. After several years of teaching myself coding, I now desire to programme websites full-time.
           </p>
         </div>
       );
