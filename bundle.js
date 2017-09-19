@@ -27505,12 +27505,12 @@ class Landing extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
           )
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'a',
+          'span',
           { className: __WEBPACK_IMPORTED_MODULE_3__styles_Landing_scss___default.a.email, style: this.state },
           'Email: dywilby@gmail.com'
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'a',
+          'span',
           { className: __WEBPACK_IMPORTED_MODULE_3__styles_Landing_scss___default.a.email, style: this.state },
           'Github: ',
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -27520,7 +27520,7 @@ class Landing extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
           )
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'a',
+          'span',
           { className: __WEBPACK_IMPORTED_MODULE_3__styles_Landing_scss___default.a.email, style: this.state },
           'Instagram: ',
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -27908,13 +27908,29 @@ class Projects extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
   constructor(props) {
     super(props);
     this.state = {
-      id: 0
+      id: -1
     };
   }
   click(data, e) {
     this.setState({ id: data });
   }
   render() {
+
+    var obj0 = { title: 'voxel.io', description: 'A small, sample game of an inbrowser version of minecraft made with threejs.' };
+    var obj1 = { title: 'Venient', description: 'A new age type of desktop computer that increases business productivity immensely.' };
+    var obj2 = { title: 'talking.io', description: 'A social media website made around visual and audio communication.' };
+    var obj3 = { title: 'Euler Solutions', description: 'My set of solutions to the famous Euler Problems.' };
+
+    var data = [obj0, obj1, obj2, obj3];
+
+    var title = '';
+    var description = '';
+
+    if (data[this.state.id] != null) {
+      title = data[this.state.id].title;
+      description = data[this.state.id].description;
+    }
+
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
       { className: __WEBPACK_IMPORTED_MODULE_5__styles_Projects_scss___default.a.content },
@@ -27936,26 +27952,26 @@ class Projects extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
           { className: __WEBPACK_IMPORTED_MODULE_5__styles_Projects_scss___default.a.projectList },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'div',
+            { onClick: this.click.bind(this, '0') },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__ProjectItem_js__["a" /* default */], { title: 'voxel.io', id: '0', sid: this.state.id })
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
             { onClick: this.click.bind(this, '1') },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__ProjectItem_js__["a" /* default */], { title: 'voxel.io', id: '1', sid: this.state.id })
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__ProjectItem_js__["a" /* default */], { title: 'Venient', id: '1', sid: this.state.id })
           ),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'div',
             { onClick: this.click.bind(this, '2') },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__ProjectItem_js__["a" /* default */], { title: 'Venient', id: '2', sid: this.state.id })
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__ProjectItem_js__["a" /* default */], { title: 'talking.io', id: '2', sid: this.state.id })
           ),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'div',
             { onClick: this.click.bind(this, '3') },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__ProjectItem_js__["a" /* default */], { title: 'talking.io', id: '3', sid: this.state.id })
-          ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'div',
-            { onClick: this.click.bind(this, '4') },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__ProjectItem_js__["a" /* default */], { title: 'Euler Solutions', id: '4', sid: this.state.id })
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__ProjectItem_js__["a" /* default */], { title: 'Euler Solutions', id: '3', sid: this.state.id })
           )
         ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__ProjectCard_js__["a" /* default */], { id: this.state.id })
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__ProjectCard_js__["a" /* default */], { id: this.state.id, title: title, description: description })
       )
     );
   }
@@ -28094,8 +28110,21 @@ class ProjectCard extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Componen
     super(props);
   }
   render() {
-    if (this.props.id == 1 || this.props.id == 2 || this.props.id == 3 || this.props.id == 4) {
-      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: __WEBPACK_IMPORTED_MODULE_3__styles_ProjectCard_scss___default.a.content });
+    if (this.props.id == 0 || this.props.id == 1 || this.props.id == 2 || this.props.id == 3) {
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: __WEBPACK_IMPORTED_MODULE_3__styles_ProjectCard_scss___default.a.content },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'h2',
+          { className: __WEBPACK_IMPORTED_MODULE_3__styles_ProjectCard_scss___default.a.title },
+          this.props.title
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'p',
+          { className: __WEBPACK_IMPORTED_MODULE_3__styles_ProjectCard_scss___default.a.descript },
+          this.props.description
+        )
+      );
     } else {
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: __WEBPACK_IMPORTED_MODULE_3__styles_ProjectCard_scss___default.a.generic });
     }
@@ -28105,7 +28134,9 @@ class ProjectCard extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Componen
 
 
 ProjectCard.PropTypes = {
-  id: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.number
+  id: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.number,
+  title: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string,
+  description: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string
 };
 
 /***/ }),
@@ -28148,12 +28179,14 @@ exports = module.exports = __webpack_require__(25)(undefined);
 
 
 // module
-exports.push([module.i, "._1kkbQfFnU6OaFJ5SHdRLnC {\n  width: 25em;\n  height: 15em;\n  background-color: #f3f3f3;\n  display: inline-block;\n  margin-left: 1em;\n  vertical-align: top; }\n\n._1CYQSagLeXwKHdiR4efpHW {\n  width: 25em;\n  height: 15em;\n  background-color: white;\n  display: inline-block;\n  margin-left: 1em;\n  vertical-align: top; }\n", ""]);
+exports.push([module.i, "._1kkbQfFnU6OaFJ5SHdRLnC {\n  width: 25em;\n  height: 15em;\n  background-color: #f3f3f3;\n  display: inline-block;\n  margin-left: 1em;\n  vertical-align: top; }\n\n._1CYQSagLeXwKHdiR4efpHW {\n  width: 25em;\n  height: 15em;\n  background-color: white;\n  display: inline-block;\n  margin-left: 1em;\n  vertical-align: top; }\n\n._2kEaZNnhYajN3sNq-puoFN {\n  text-align: center;\n  margin: .5em; }\n\n._3GthMD-dSap6oO9OreZeTB {\n  width: 20em;\n  margin-left: auto;\n  margin-right: auto; }\n", ""]);
 
 // exports
 exports.locals = {
 	"content": "_1kkbQfFnU6OaFJ5SHdRLnC",
-	"generic": "_1CYQSagLeXwKHdiR4efpHW"
+	"generic": "_1CYQSagLeXwKHdiR4efpHW",
+	"title": "_2kEaZNnhYajN3sNq-puoFN",
+	"descript": "_3GthMD-dSap6oO9OreZeTB"
 };
 
 /***/ }),
@@ -28196,7 +28229,7 @@ exports = module.exports = __webpack_require__(25)(undefined);
 
 
 // module
-exports.push([module.i, "._3m1dKlUSeoI8dXWnEWfZW {\n  position: relative;\n  width: 100vw;\n  height: 100vh; }\n\n.GCHgfofEuGkRrkiv0W_Fh {\n  position: absolute;\n  top: 40%;\n  left: 50%;\n  transform: translate(-50%, -50%); }\n\n._39i6Asgkr35-4wAIiMe8Lq {\n  display: inline-block;\n  vertical-align: top;\n  margin: 0;\n  margin-right: .5em; }\n\n._1VI6b1rymOK7kbfvmBcFw- {\n  float: right;\n  margin-top: 2em;\n  margin-right: 4em; }\n\n._3bm6kdjVQ0uptJF2mAjkvf {\n  display: inline-block;\n  border-left: 2px grey solid; }\n\n._1wdjfIxDQtz1PX433Ql2-a {\n  display: block;\n  width: 20em;\n  margin-bottom: 0;\n  margin-left: 1em;\n  padding: .5em;\n  font-size: .8em;\n  cursor: pointer;\n  background-color: #f3f3f3; }\n\n._9sUtPm-2bjQc6kXWKSO81 {\n  display: block;\n  width: 20em;\n  margin-bottom: 1em;\n  margin-left: 1em;\n  padding: .5em;\n  font-size: .8em;\n  cursor: pointer;\n  background-color: #f3f3f3; }\n", ""]);
+exports.push([module.i, "._3m1dKlUSeoI8dXWnEWfZW {\n  position: relative;\n  width: 100vw;\n  height: 100vh; }\n\n.GCHgfofEuGkRrkiv0W_Fh {\n  position: absolute;\n  top: 40%;\n  left: 50%;\n  transform: translate(-50%, -40%);\n  width: 60em; }\n\n._39i6Asgkr35-4wAIiMe8Lq {\n  display: inline-block;\n  vertical-align: top;\n  margin: 0;\n  margin-right: .5em; }\n\n._1VI6b1rymOK7kbfvmBcFw- {\n  float: right;\n  margin-top: 2em;\n  margin-right: 4em; }\n\n._3bm6kdjVQ0uptJF2mAjkvf {\n  display: inline-block;\n  border-left: 2px grey solid; }\n\n._1wdjfIxDQtz1PX433Ql2-a {\n  display: block;\n  width: 20em;\n  margin-bottom: 0;\n  margin-left: 1em;\n  padding: .5em;\n  font-size: .8em;\n  cursor: pointer;\n  background-color: #f3f3f3; }\n\n._9sUtPm-2bjQc6kXWKSO81 {\n  display: block;\n  width: 20em;\n  margin-bottom: 1em;\n  margin-left: 1em;\n  padding: .5em;\n  font-size: .8em;\n  cursor: pointer;\n  background-color: #f3f3f3; }\n", ""]);
 
 // exports
 exports.locals = {

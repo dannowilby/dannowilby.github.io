@@ -33,9 +33,9 @@ export default class Landing extends React.Component {
             </div>
             <a onClick={this.changeShowEmail} className={styles.bot}>Contact Me</a>
           </div>
-          <a className={styles.email} style={this.state}>Email: dywilby@gmail.com</a>
-          <a className={styles.email} style={this.state}>Github: <a href='https://github.com/dannowilby'>https:&#47;&#47;github.com/dannowilby</a></a>
-          <a className={styles.email} style={this.state}>Instagram: <a href='https://www.instagram.com/daniel.wilby/'>daniel.wilby</a></a>
+          <span className={styles.email} style={this.state}>Email: dywilby@gmail.com</span>
+          <span className={styles.email} style={this.state}>Github: <a href='https://github.com/dannowilby'>https:&#47;&#47;github.com/dannowilby</a></span>
+          <span className={styles.email} style={this.state}>Instagram: <a href='https://www.instagram.com/daniel.wilby/'>daniel.wilby</a></span>
         </div>
       </div>
     );

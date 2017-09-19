@@ -9,9 +9,14 @@ export default class ProjectCard extends React.Component {
     super(props);
   }
   render() {
-    if(this.props.id == 1 || this.props.id == 2 || this.props.id == 3 || this.props.id == 4) {
+    if(this.props.id == 0 ||
+       this.props.id == 1 ||
+       this.props.id == 2 ||
+       this.props.id == 3) {
       return (
         <div className={styles.content}>
+          <h2 className={styles.title}>{this.props.title}</h2>
+          <p className={styles.descript}>{this.props.description}</p>
         </div>
       );
     }
@@ -26,4 +31,6 @@ export default class ProjectCard extends React.Component {
 
 ProjectCard.PropTypes = {
   id: PropTypes.number,
+  title: PropTypes.string,
+  description: PropTypes.string,
 }
