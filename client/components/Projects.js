@@ -19,10 +19,18 @@ export default class Projects extends React.Component {
   }
   render() {
 
-    var obj0 = { title: 'voxel.io', description: 'A small, sample game of an inbrowser version of minecraft made with threejs.' };
-    var obj1 = { title: 'Venient', description: 'A new age type of desktop computer that increases business productivity immensely.' };
-    var obj2 = { title: 'talking.io', description: 'A social media website made around visual and audio communication.' };
-    var obj3 = { title: 'Euler Solutions', description: 'My set of solutions to the famous Euler Problems.' };
+    var obj0 = { title: 'voxel.io',
+                 description: 'A small, sample game of an inbrowser version of minecraft made with threejs.',
+                 url: 'http://voxel.danno.world' };
+    var obj1 = { title: 'Venient',
+                 description: 'A new age type of desktop computer that increases business productivity immensely.',
+                 url: 'http://venient.danno.world' };
+    var obj2 = { title: 'talking.io',
+                 description: 'A social media website made around visual and audio communication.',
+                 url: 'http://talking.danno.world' };
+    var obj3 = { title: 'Euler Solutions',
+                 description: 'My set of solutions to the famous Euler Problems.',
+                 url: 'http://euler.danno.world' };
 
     var data = [ obj0,
                  obj1,
@@ -31,10 +39,12 @@ export default class Projects extends React.Component {
 
     var title = '';
     var description = '';
+    var url = '';
 
     if(data[this.state.id] != null) {
       title = data[this.state.id].title;
       description = data[this.state.id].description;
+      url = data[this.state.id].url;
     }
 
     return (
@@ -48,7 +58,7 @@ export default class Projects extends React.Component {
             <div onClick={this.click.bind(this, '2')}><ProjectItem title='talking.io'      id='2' sid={this.state.id} /></div>
             <div onClick={this.click.bind(this, '3')}><ProjectItem title='Euler Solutions' id='3' sid={this.state.id} /></div>
           </div>
-          <ProjectCard id={this.state.id} title={title} description={description} />
+          <ProjectCard id={this.state.id} title={title} description={description} url={url} />
         </div>
       </div>
     );

@@ -5,6 +5,7 @@
   display: inline-block;
   margin-left: 1em;
   vertical-align: top;
+  position: relative;
 }
 
 .generic {
@@ -25,4 +26,12 @@
   width: 20em;
   margin-left: auto;
   margin-right: auto;
+}
+
+.link {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  font-size: .75em;
 }

@@ -17,6 +17,7 @@ export default class ProjectCard extends React.Component {
         <div className={styles.content}>
           <h2 className={styles.title}>{this.props.title}</h2>
           <p className={styles.descript}>{this.props.description}</p>
+          <a className={styles.link} href={this.props.url}>Link to Project</a>
         </div>
       );
     }
@@ -33,4 +34,5 @@ ProjectCard.PropTypes = {
   id: PropTypes.number,
   title: PropTypes.string,
   description: PropTypes.string,
+  url: PropTypes.string,
 }
