@@ -5,6 +5,9 @@ module.exports = {
     path: path.resolve(''),
     filename: 'bundle.js'
   },
+  devServer: {
+      historyApiFallback: true
+  },
   module: {
     loaders: [
       { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
